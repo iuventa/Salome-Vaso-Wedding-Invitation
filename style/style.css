@@ -1,0 +1,807 @@
+@font-face {
+    font-family: bpg_mikheil_stefane;
+    src: url(../font/bpg_mikheil_stefane-26883429579.otf); 
+}
+@font-face {
+    font-family: Galaktioni;
+    src: url(../font/DM-Galaktioni-UNI-180426073.ttf);;
+}
+@font-face {
+    font-family: Javakhishvili;
+    src: url(../font/DM-Ivane-Javakhishvili-UNI-89782055192.ttf);
+}
+@font-face {
+    font-family: geo_rustaveli;;
+    src: url(../font/geo_rustaveli-13648409130.ttf);
+}
+@font-face {
+    font-family: geo_tabidze;
+    src: url(../font/geo_tabidze-12487314067.ttf);
+}
+@font-face {
+    font-family: LS_Knight;
+    src: url(../font/LS_Knight-Regular-57675407628.otf);
+}
+@font-face {
+    font-family: TFMecomicse;
+    src: url(../font/TFMecomicse-Regular-59522229166.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: bpg_mikheil_stefane;
+    color: #2e5d50;
+}
+
+body{
+    background-color: #f0ede1;
+}
+.index{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;  
+    background-attachment: fixed;  
+}
+.indexmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.envelope{
+    font-size: 24px;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    color: #2e5d50;
+}
+
+.envelope img{
+    width: 100%;
+    animation: envelope 2s infinite;
+}
+@keyframes envelope {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+.giwvevt{
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.openedenvelope{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    height: 850px;
+    max-width: 400px;
+    margin: 0 auto;
+    top:-100px;
+}
+.envelopeopen{
+    width: 300px;
+    position: absolute;
+    top:130px;
+    z-index:2;
+}
+.envelopeopen img{
+
+    width: 100%;
+}
+.paper{
+    width: 280px;
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    top:100px;
+    z-index:1;
+}
+.paper img{
+    width: 100%;
+    margin-top: -150px;
+}
+.datestart,#timeuntillweddingday{
+     position: absolute;
+    top:140px;
+    z-index:3;
+    font-size: 22px;
+
+}
+#timeuntillweddingday{
+    top:180px;
+    font-weight: 700;
+}
+.bouquey{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:210px;
+    left: 0;
+    z-index: 4;
+}
+.bouquey img{
+    width: 100%;
+}
+.vinylCont{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:250px;
+    right:30px;
+    z-index: 4;
+}
+.vinyl{
+    width: 100%;
+    animation: none;
+}
+.vinyl.playing {
+  animation: rotateVinyl 3s linear infinite;
+}
+.vinylCont p{
+    font-size: 18px;
+    width: 110px;
+    text-align: center;
+    margin: 0 auto;
+}
+@keyframes rotateVinyl {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.polaroid{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top:400px;
+    left:10px;
+    z-index: 3;
+    transform: rotate(-10deg);
+}
+.polaroid img{
+    width: 100%;
+}
+.bouquey2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:720px;
+    left: 50px;
+    z-index: 4; 
+}
+.bouquey2 img{
+    width:100%;
+}
+.oldpaper{
+    width: 250px;
+    height: 370px;
+    position: absolute;
+    top:500px;
+    right: 0;
+    z-index: 4; 
+    background-image: url(../img/paper.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+    padding-top: 20px;
+}
+.weddinginv{
+    font-size: 22px;
+    width: 150px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.vs{
+    font-size: 26px;
+    width: 150px;
+    margin: 20px auto;
+    font-weight: 600;
+}
+
+.day, .year{
+    width: 150px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.day{
+    margin-top: 40px;
+    font-size: 20px;
+}
+.plan{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.invite{
+    text-align: center;
+    padding: 50px;
+}
+.happy{
+    text-align: center;
+    font-size: 22px;
+}
+
+
+
+:root {
+  --cream: #faf7f0;
+  --card: #fffdf9;
+  --gold: #b79a68;
+  --gold-light: #e5d7bb;
+  --brown: #514438;
+  --muted: #948779;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  padding: 50px 20px;
+  line-height: 1.8;
+}
+
+.wedding-plan {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.eyebrow {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  margin-top: 18px;
+  max-width: 300px;
+text-align: center;
+margin: 20px auto;
+}
+
+.plan-header h1 {
+  font-size: clamp(24px, 5vw, 38px);
+  font-weight: 500;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.subtitle {
+  font-size: 18px;
+  max-width: 300px;
+  margin: 0 auto;
+  color: #2e5d50;
+}
+
+.header-date {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 7px 22px;
+  border-top: 1px solid var(--gold-light);
+  border-bottom: 1px solid var(--gold-light);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 125px;
+  top: 15px;
+  bottom: 30px;
+  width: 1px;
+  background: var(--gold-light);
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 100px 50px 1fr;
+  align-items: start;
+  gap: 0;
+  margin-bottom: 28px;
+}
+
+.event-time {
+  text-align: right;
+  padding-top: 23px;
+  color: var(--gold);
+  font-size: 17px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-marker {
+  width: 27px;
+  height: 27px;
+  margin: 24px auto 0;
+  background: var(--cream);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.final-marker {
+  background: var(--gold);
+  color: white;
+}
+
+.event-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid #eee6d8;
+  padding: 22px 25px;
+  border-radius: 3px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(95, 76, 48, 0.07);
+}
+
+.event-number {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #e4d8c4;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.event-card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding-right: 25px;
+}
+
+.event-card p {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.event-card .location {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+/* Google Maps button */
+
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 7px 14px;
+  border: 1px solid var(--gold-light);
+  border-radius: 2px;
+  text-decoration: none;
+  color: #8b7047;
+  font-family: inherit;
+  font-size: 11px;
+  transition: all 0.25s ease;
+}
+
+.map-button span {
+  font-size: 15px;
+}
+
+.map-button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+/* Gala dinner highlight */
+
+.event-card.highlight {
+  background: #f3ede1;
+  border-color: #d9c5a0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.highlight h2 {
+  font-size: 20px;
+}
+
+.special-label {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 7px;
+}
+
+/* Footer */
+
+.plan-footer {
+  text-align: center;
+  margin-top: 70px;
+  padding-top: 30px;
+  border-top: 1px solid var(--gold-light);
+}
+
+.footer-ornament {
+  color: var(--gold);
+  font-size: 25px;
+}
+
+.plan-footer p {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.plan-footer span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
+/* Mobile responsive */
+
+@media only screen and (max-width: 400px) {
+  body {
+    padding: 35px 14px;
+  }
+
+  .plan-header {
+    margin-bottom: 40px;
+  }
+
+  .plan-header h1 {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .timeline::before {
+    left: 67px;
+  }
+
+  .event {
+    grid-template-columns: 53px 29px minmax(0, 1fr);
+    margin-bottom: 20px;
+  }
+
+  .event-time {
+    font-size: 13px;
+    padding-top: 20px;
+    padding-right: 5px;
+    text-align: left;
+  }
+
+  .timeline-marker {
+    width: 23px;
+    height: 23px;
+    margin-top: 20px;
+    font-size: 11px;
+  }
+
+  .event-card {
+    padding: 17px 13px;
+  }
+
+  .event-card h2 {
+    font-size: 13px;
+    line-height: 1.8;
+    padding-right: 12px;
+  }
+
+  .event-card p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .event-number {
+    font-size: 18px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .event-card.highlight {
+    padding: 20px 13px;
+  }
+
+  .highlight h2 {
+    font-size: 16px;
+  }
+
+  .special-label {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .map-button {
+    padding: 7px 9px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .plan-footer {
+    margin-top: 45px;
+  }
+}
+
+/* RSVP SECTION */
+
+.rsvp-section {
+    width: min(90%, 600px);
+    margin: 60px auto;
+    padding: 45px 35px;
+    text-align: center;
+    background: rgba(255, 253, 248, 0.8);
+    border: 1px solid #dfd2b9;
+    outline: 1px solid rgba(183, 154, 104, 0.2);
+    outline-offset: -8px;
+    color: #514438;
+}
+
+.rsvp-decoration {
+    color: #b79a68;
+    font-size: 25px;
+    letter-spacing: 6px;
+    margin-bottom: 18px;
+}
+
+.rsvp-subtitle {
+    font-family: Georgia, serif;
+    color: #b79a68;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.rsvp-section h2 {
+    font-size: clamp(23px, 4vw, 32px);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.rsvp-text {
+    max-width: 410px;
+    margin: 0 auto;
+    color: #817567;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.rsvp-divider {
+    margin: 24px 0;
+    color: #b79a68;
+    font-size: 22px;
+}
+
+.rsvp-section h3 {
+    font-size: clamp(17px, 3vw, 21px);
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.rsvp-deadline {
+    font-size: 13px;
+    color: #817567;
+    line-height: 2;
+}
+
+.rsvp-deadline strong {
+    display: block;
+    color: #9c7b49;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.rsvp-note {
+    max-width: 400px;
+    margin: 20px auto 25px;
+    color: #817567;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.rsvp-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 25px;
+    background: #526b5a;
+    color: #fffdf8;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 13px;
+    border: 1px solid #526b5a;
+    transition: all 0.3s ease;
+}
+
+.rsvp-button:hover {
+    background: transparent;
+    color: #526b5a;
+}
+
+.rsvp-button span {
+    font-size: 17px;
+}
+
+.rsvp-footer {
+    margin-top: 35px;
+    color: #9c8b72;
+    font-size: 13px;
+}
+
+@media (max-width: 400px) {
+    .rsvp-section {
+        width: 94%;
+        margin: 35px auto;
+        padding: 38px 22px;
+    }
+
+    .rsvp-text {
+        font-size: 16px;
+    }
+
+    .rsvp-note {
+        font-size: 14px;
+    }
+
+    .rsvp-button {
+        padding: 13px 18px;
+        font-size: 16px;
+    }
+}
+
+.rsvp-section {
+  max-width: 620px;
+  margin: 70px auto;
+  padding: 40px 24px;
+  text-align: center;
+  color: #514638;
+  background: #fbf7ef;
+  border: 1px solid #d8c49c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.rsvp-subtitle {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #9b8050;
+}
+
+.rsvp-section h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: normal;
+  margin: 22px 0 12px;
+}
+
+.rsvp-text {
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+#rsvpForm > label,
+.attendance-options legend {
+  font-size: 16px;
+  color: #67583f;
+}
+
+#rsvpForm > input,
+#rsvpForm > select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9cdb8;
+  border-radius: 3px;
+  background: #fffdf9;
+  color: #514638;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus {
+  outline: 2px solid #b49a6a;
+  outline-offset: 2px;
+}
+
+.attendance-options {
+  margin: 12px 0;
+  padding: 16px;
+  border: 1px solid #e0d3bd;
+}
+
+.attendance-options legend {
+  padding: 0 6px;
+}
+
+.attendance-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 15px 0;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.attendance-options input {
+  margin-top: 4px;
+  accent-color: #9b8050;
+}
+
+#rsvpSubmit {
+  padding: 15px;
+  margin-top: 8px;
+  border: 1px solid #9b8050;
+  background: #9b8050;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#rsvpSubmit:hover {
+  background: #80683f;
+}
+
+#rsvpSubmit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#rsvpMessage {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.rsvp-footer {
+  margin-top: 30px;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+@media (max-width: 400px) {
+  .rsvp-section {
+    margin: 40px 12px;
+    padding: 28px 18px;
+  }
+}
