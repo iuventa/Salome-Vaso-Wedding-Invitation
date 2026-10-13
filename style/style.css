@@ -755,17 +755,42 @@ margin: 20px auto;
 
 .attendance-options label {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
-  margin: 15px 0;
-  line-height: 1.5;
+  margin: 10px 0;
+  padding: 12px 16px;
+  border: 1px solid #d9cdb8;
+  border-radius: 8px;
+  background: #fffdf9;
+  color: #67583f;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.attendance-options input {
-  margin-top: 4px;
-  accent-color: #9b8050;
+/* რადიო წრის დამალვა */
+.attendance-options input[type="radio"] {
+  display: none;
 }
+
+/* არჩეული ღილაკი */
+.attendance-options label:has(input[type="radio"]:checked) {
+  background: #9b8050;
+  border-color: #9b8050;
+  color: white;
+}
+
+/* მაუსის მიტანის ეფექტი */
+.attendance-options label:hover {
+  border-color: #9b8050;
+  background: #f5efe4;
+}
+
+.attendance-options label:has(input[type="radio"]:checked):hover {
+  background: #80683f;
+  color: white;
+}
+
 
 #rsvpSubmit {
   padding: 15px;
@@ -803,5 +828,284 @@ margin: 20px auto;
   .rsvp-section {
     margin: 40px 12px;
     padding: 28px 18px;
+  }
+}
+
+
+
+/* ===== WISHES SECTION ===== */
+
+.wishes-section {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 30px 20px;
+  color: #514638;
+  text-align: center;
+}
+
+.wishes-heading {
+  margin-bottom: 30px;
+}
+
+.wishes-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #9b8050;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.wishes-heading h2,
+.wish-form-card h2 {
+  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(26px, 4vw, 38px);
+}
+
+.wishes-heading p,
+.wish-form-card > p {
+  color: #80715d;
+  line-height: 1.8;
+}
+
+/* კარუსელი */
+
+.wishes-carousel {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  align-items: center;
+  gap: 12px;
+}
+
+.wishes-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 12px 2px 22px;
+}
+
+.wishes-track::-webkit-scrollbar {
+  display: none;
+}
+
+.wish-card {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-height: 220px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  background: #fffdf9;
+  border: 1px solid #e0d3bd;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgb(103 88 63 / 6%);
+
+  scroll-snap-align: center;
+  overflow-wrap: anywhere;
+}
+
+.wish-card-quote {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.wish-card-heart {
+  color: #9b8050;
+  font-size: 22px;
+}
+
+.wish-card-name {
+  margin: 0;
+  color: #9b8050;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.carousel-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d9cdb8;
+  border-radius: 50%;
+  background: #fffdf9;
+  color: #80683f;
+  font-size: 23px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: #9b8050;
+  color: white;
+}
+
+.carousel-arrow:focus-visible,
+#wishSubmit:focus-visible {
+  outline: 2px solid #9b8050;
+  outline-offset: 4px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 48px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #d9cdb8;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #9b8050;
+  transform: scale(1.25);
+}
+
+.wishes-loading {
+  width: 100%;
+  padding: 35px 0;
+  color: #80715d;
+}
+
+/* სურვილის ფორმა */
+
+.wish-form-card {
+  max-width: 580px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 36px;
+  border: 1px solid #e0d3bd;
+  background: #fffdf9;
+  box-shadow: 0 8px 30px rgb(103 88 63 / 5%);
+}
+
+#wishForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+#wishForm label {
+  color: #67583f;
+  font-size: 15px;
+}
+
+#wishForm input,
+#wishForm textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9cdb8;
+  border-radius: 3px;
+  background: white;
+  color: #514638;
+  font: inherit;
+}
+
+#wishForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#wishForm input:focus,
+#wishForm textarea:focus {
+  outline: 2px solid #b49a6a;
+  outline-offset: 2px;
+}
+
+#wishSubmit {
+  margin-top: 8px;
+  padding: 15px;
+  border: 1px solid #9b8050;
+  border-radius: 3px;
+  background: #9b8050;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#wishSubmit:hover {
+  background: #80683f;
+}
+
+#wishSubmit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.wish-message {
+  min-height: 24px;
+  margin: 5px 0 0;
+  text-align: center;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.wish-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ტელეფონი და ტაბლეტი */
+
+@media (max-width: 700px) {
+  .wishes-section {
+    margin: 40px auto;
+    padding: 20px 12px;
+  }
+
+  .wishes-carousel {
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+    gap: 6px;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 19px;
+  }
+
+  .wish-card {
+    flex: 0 0 100%;
+    min-height: 200px;
+    padding: 24px 18px;
+  }
+
+  .wish-form-card {
+    padding: 25px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wishes-track {
+    scroll-behavior: auto;
+  }
+
+  .carousel-arrow,
+  #wishSubmit {
+    transition: none;
   }
 }
