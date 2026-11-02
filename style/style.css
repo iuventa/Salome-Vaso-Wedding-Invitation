@@ -553,7 +553,7 @@ margin: 20px auto;
   }
 }
 
-/* RSVP SECTION */
+RSVP SECTION
 
 .rsvp-section {
     width: min(90%, 600px);
@@ -890,5 +890,85 @@ margin: 20px auto;
       font-size: 18px;
       width:350px;
       margin: 0 auto;
+    }
+}
+
+
+.rsvp-section {
+    max-width: 620px;
+    margin: 70px auto;
+    padding: 40px 24px;
+    text-align: center;
+    color: #514638;
+    background: #fbf7ef;
+    border: 1px solid #d8c49c;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.rsvp-decoration {
+    font-size: 24px;
+    color: #9b8050;
+    margin-bottom: 20px;
+}
+
+.rsvp-subtitle {
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #9b8050;
+}
+
+.rsvp-section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(26px, 5vw, 36px);
+    font-weight: normal;
+    margin: 22px 0 12px;
+}
+
+.rsvp-text {
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.rsvp-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.rsvp-contacts p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.rsvp-contacts a {
+    color: #80683f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.rsvp-contacts a:hover {
+    color: #9b8050;
+    text-decoration: underline;
+}
+
+.rsvp-footer {
+    margin-top: 30px;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* მობილური მოწყობილობებისთვის */
+@media (max-width: 480px) {
+    .rsvp-section {
+        margin: 40px 16px;
+        padding: 32px 20px;
+    }
+
+    .rsvp-contacts p {
+        font-size: 16px;
     }
 }
